@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "DotNetWatch",
+            "request": "launch",
+            "name": ".NET Core Watch",
+            "args": [],
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            }
+        },
+        {
+            "name": "C#: lunaAI",
+            "type": "dotnet",
+            "request": "launch",
+            "projectPath": "${workspaceFolder}\\lunaAI.csproj",
+            "launchConfigurationId": "TargetFramework=;lunaAI"
+        }
+    ]
+}

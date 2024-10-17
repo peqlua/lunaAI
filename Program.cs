@@ -13,7 +13,7 @@ void GostaDeAnime()
 
     people = (Console.ReadLine());
 
-    if (people == "sim")
+    if (people.ToUpper() == "SIM")
     {
         //Console.WriteLine("nossa eu também(ºUº)");
         
@@ -22,14 +22,14 @@ void GostaDeAnime()
         Console.WriteLine ("de qual?");
 
         qual = (Console.ReadLine());
-
-        if (qual == "one piece")
+qual = qual.ToUpper();
+        if (qual == "ONE PIECE" || qual == "SPY X FAMLY" || qual == "LOVE IS WAR" || qual == "NARUTO" || qual == "MY LITLE WICH ACADEMIA")
         {
             Console.WriteLine ("nossa eu também(ºUº)");
         }
         else
         {
-             Console.WriteLine("SEU BURRO VC NÃO ASSISTE ONE PIECE É ?!?!");
+             Console.WriteLine("SEU BURRO VC NÃO ASSISTE ANIMES BONS É ?!?!");
         }
     }
     else
@@ -41,7 +41,7 @@ void GostaDeAnime()
 
         oque = (Console.ReadLine());
 
-        if (oque == "carrosel")
+        if (oque.ToUpper() == "CARROSEL")
         {
             Console.WriteLine ("nossa eu também/(ºUº)/");
         }

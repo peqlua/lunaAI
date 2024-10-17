@@ -1,19 +1,37 @@
 ﻿
 //QualAnimal();
 //Question();
+//Jogo();
+//Adivinha();
 
-Jogo();
+void Adivinha()
+{
 
 
+    string people;
 
+    Console.WriteLine("adivinhe um numero de 1 a 5");
 
+    people = Console.ReadLine();
+
+    if (people == Random(1, 5))
+    {
+        Console.WriteLine("acertou");
+    }
+    else
+    {
+        Console.WriteLine("errou");
+    }
+}
 void Jogo()
+
+
 {
     string sair = "";
 
     Console.WriteLine("vc quer sair, s ou n ?");
 
-sair = Console.ReadLine();
+    sair = Console.ReadLine();
 
     if (sair == "sim")
     {
@@ -84,4 +102,10 @@ void Question()
         Console.WriteLine($" vc é muito pobre {name} vc só tem {toys} brinquedos kkkkkkkkkkk");
     }
 
+}
+
+static string Random(int first, int end)
+{
+    var random = new Random();
+    return random.Next(first, end + 1) + "";
 }

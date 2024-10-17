@@ -3,18 +3,67 @@
 //Question();
 //Jogo();
 //Adivinha();
+GostaDeAnime();
+
+void GostaDeAnime()
+{
+    string people;
+
+    Console.WriteLine("vc gosta de anime? sim/não");
+
+    people = (Console.ReadLine());
+
+    if (people == "sim")
+    {
+        //Console.WriteLine("nossa eu também(ºUº)");
+        
+        string qual;
+        
+        Console.WriteLine ("de qual?");
+
+        qual = (Console.ReadLine());
+
+        if (qual == "one piece")
+        {
+            Console.WriteLine ("nossa eu também(ºUº)");
+        }
+        else
+        {
+             Console.WriteLine("SEU BURRO VC NÃO ASSISTE ONE PIECE É ?!?!");
+        }
+    }
+    else
+    {
+       // Console.WriteLine("SEU BURRO VC NÃO ASSISTE ANIME É ?!?!");
+        string oque;
+        
+        Console.WriteLine ("de que vc gosta então?");
+
+        oque = (Console.ReadLine());
+
+        if (oque == "carrosel")
+        {
+            Console.WriteLine ("nossa eu também/(ºUº)/");
+        }
+        else
+        {
+             Console.WriteLine("SEU BURRO VC NÃO ASSISTE ONE CARROSEL É ?!?!");
+        }
+    }
+}
+
 
 void Adivinha()
 {
 
 
-    string people;
+    string peple;
 
     Console.WriteLine("adivinhe um numero de 1 a 5");
 
-    people = Console.ReadLine();
+    peple = Console.ReadLine();
 
-    if (people == Random(1, 5))
+    if (peple == Random(1, 5))
     {
         Console.WriteLine("acertou");
     }
@@ -23,6 +72,8 @@ void Adivinha()
         Console.WriteLine("errou");
     }
 }
+
+
 void Jogo()
 
 
@@ -103,6 +154,7 @@ void Question()
     }
 
 }
+
 
 static string Random(int first, int end)
 {

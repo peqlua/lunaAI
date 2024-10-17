@@ -23,7 +23,7 @@ void GostaDeAnime()
 
         qual = (Console.ReadLine());
 qual = qual.ToUpper();
-        if (qual == "ONE PIECE" || qual == "SPY X FAMLY" || qual == "LOVE IS WAR" || qual == "NARUTO" || qual == "MY LITLE WICH ACADEMIA")
+        if (qual == "ONE PIECE" || qual == "SPY X FAMLIY" || qual == "LOVE IS WAR" || qual == "NARUTO" || qual == "MY LITLE WICH ACADEMIA" || qual == "ASASINATION CLASSROOM")
         {
             Console.WriteLine ("nossa eu também(ºUº)");
         }

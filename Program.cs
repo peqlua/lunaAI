@@ -3,7 +3,54 @@
 //Question();
 //Jogo();
 //Adivinha();
-GostaDeAnime();
+//GostaDeAnime();
+//Vezes();
+using Microsoft.VisualBasic;
+
+Iniciador();
+
+void Iniciador()
+{
+
+    string sair = "n";
+
+    while (sair == "n")
+    {
+
+        GostaDeAnime();
+        H.Write ("vc quer sair");
+        sair = H.Read();
+    }
+
+    H.Write("vc conseguiu sair");
+
+}
+
+void Vezes()
+{
+
+    int resposta;
+
+    int numero1 = H.Random(1, 9);
+
+    int numero2 = H.Random(1, 9);
+
+    int result = numero1 * numero2;
+
+    H.Write($"quanto é {numero1} vezes {numero2} ?");
+
+    resposta = H.ReadInt();
+
+    if (resposta == result)
+    {
+        H.Write($"vc ganhou era {result} (:");
+    }
+    else
+    {
+        H.Write($"vc perdeu era {result} ):");
+    }
+
+}
 
 void GostaDeAnime()
 {
@@ -16,38 +63,38 @@ void GostaDeAnime()
     if (people.ToUpper() == "SIM")
     {
         //Console.WriteLine("nossa eu também(ºUº)");
-        
+
         string qual;
-        
-        Console.WriteLine ("de qual?");
+
+        Console.WriteLine("de qual?");
 
         qual = (Console.ReadLine());
-qual = qual.ToUpper();
-        if (qual == "ONE PIECE" || qual == "SPY X FAMLIY" || qual == "LOVE IS WAR" || qual == "NARUTO" || qual == "MY LITLE WICH ACADEMIA" || qual == "ASASINATION CLASSROOM")
+        qual = qual.ToUpper();
+        if (qual == "ONE PIECE" || qual == "SPY X FAMILY" || qual == "LOVE IS WAR" || qual == "NARUTO" || qual == "MY LITLE WICH ACADEMIA" || qual == "ASASINATION CLASSROOM")
         {
-            Console.WriteLine ("nossa eu também(ºUº)");
+            Console.WriteLine("nossa eu também(ºUº)");
         }
         else
         {
-             Console.WriteLine("SEU BURRO VC NÃO ASSISTE ANIMES BONS É ?!?!");
+            Console.WriteLine("SEU BURRO VC NÃO ASSISTE ANIMES BONS É ?!?!");
         }
     }
     else
     {
-       // Console.WriteLine("SEU BURRO VC NÃO ASSISTE ANIME É ?!?!");
+        // Console.WriteLine("SEU BURRO VC NÃO ASSISTE ANIME É ?!?!");
         string oque;
-        
-        Console.WriteLine ("de que vc gosta então?");
+
+        Console.WriteLine("de desenho animado vc gosta então?");
 
         oque = (Console.ReadLine());
 
         if (oque.ToUpper() == "CARROSEL")
         {
-            Console.WriteLine ("nossa eu também/(ºUº)/");
+            Console.WriteLine("nossa eu também/(ºUº)/");
         }
         else
         {
-             Console.WriteLine("SEU BURRO VC NÃO ASSISTE ONE CARROSEL É ?!?!");
+            Console.WriteLine("SEU BURRO VC NÃO ASSISTE CARROSEL É ?!?!");
         }
     }
 }
@@ -63,7 +110,7 @@ void Adivinha()
 
     peple = Console.ReadLine();
 
-    if (peple == Random(1, 5))
+    if (peple == (H.Random(1, 5) + ""))
     {
         Console.WriteLine("acertou");
     }
@@ -156,8 +203,3 @@ void Question()
 }
 
 
-static string Random(int first, int end)
-{
-    var random = new Random();
-    return random.Next(first, end + 1) + "";
-}

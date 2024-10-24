@@ -5,9 +5,22 @@
 //Adivinha();
 //GostaDeAnime();
 //Vezes();
-using Microsoft.VisualBasic;
+//Iniciador();
+Contador();
 
-Iniciador();
+void Contador()
+{
+
+    int numeros = 2;
+    while (numeros < 501)
+    {
+        H.Write(numeros);
+        numeros = numeros + 2;
+
+    }
+
+}
+
 
 void Iniciador()
 {
@@ -18,13 +31,14 @@ void Iniciador()
     {
 
         GostaDeAnime();
-        H.Write ("vc quer sair");
+        H.Write("vc quer sair");
         sair = H.Read();
     }
 
     H.Write("vc conseguiu sair");
 
 }
+
 
 void Vezes()
 {
@@ -51,6 +65,7 @@ void Vezes()
     }
 
 }
+
 
 void GostaDeAnime()
 {

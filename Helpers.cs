@@ -5,6 +5,11 @@ class H
         Console.WriteLine(":::> " + text);
     }
 
+    public static void Write(int number)
+    {
+        Write(number.ToString());
+    }
+
     public static string Read()
     {
         return Console.ReadLine();

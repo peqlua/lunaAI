@@ -4,9 +4,28 @@
 //Jogo();
 //Adivinha();
 //GostaDeAnime();
-//Vezes();
+Vezes();
 //Iniciador();
-Contador();
+//Contador();
+//Calculadora();
+
+void Calculadora()
+{
+
+    int n1 = 0;
+
+    int n2 = 0;
+
+ n1 = H.ReadInt();
+
+    n2 = H.ReadInt();
+
+    int resposta = n1 * n2;
+
+    H.Write($"{resposta}");
+
+}
+
 
 void Contador()
 {
@@ -43,26 +62,52 @@ void Iniciador()
 void Vezes()
 {
 
-    int resposta;
+    string saiu = "n";
 
-    int numero1 = H.Random(1, 9);
+    int point = 0;
 
-    int numero2 = H.Random(1, 9);
+    int cont = 0;
 
-    int result = numero1 * numero2;
-
-    H.Write($"quanto é {numero1} vezes {numero2} ?");
-
-    resposta = H.ReadInt();
-
-    if (resposta == result)
+    while (saiu == "n")
     {
-        H.Write($"vc ganhou era {result} (:");
+        int resposta;
+
+        int numero1 = H.Random(1, 9);
+
+        int numero2 = H.Random(1, 9 + point);
+
+        int result = numero1 * numero2;
+
+        H.Write($"quanto é {numero1} vezes {numero2} ?");
+
+        resposta = H.ReadInt();
+
+        if (resposta == result)
+        {
+            H.Write($"vc ganhou era {result} (:");
+            point = point + 1;
+            cont = cont + 1;
+        }
+        else
+        {
+            H.Write($"vc perdeu era {result} ):");
+            saiu = "s";
+        }
+
+        if (cont == 3)
+        {
+            H.Write($"Vc ja acertou {point} vezes");
+            cont = 0;
+        }
+
+
+        //H.Write ("vc quer saire?");
+        //saiu = H.Read();
     }
-    else
-    {
-        H.Write($"vc perdeu era {result} ):");
-    }
+
+
+
+    H.Write($"vc saiu e acertou {point} vezes");
 
 }
 

@@ -4,10 +4,41 @@
 //Jogo();
 //Adivinha();
 //GostaDeAnime();
-Vezes();
+//Vezes();
 //Iniciador();
 //Contador();
 //Calculadora();
+N123();
+
+void N123()
+{
+
+int number1;
+
+int number2;
+
+int number3;
+
+int resp;
+
+H.Write ("dijite 3 numeros um de cada vez, e eles vão se somar-(º^º)- -podi credita-");
+
+number1 = H.ReadInt();
+
+H.Write ("next numbir");
+
+number2 = H.ReadInt();
+
+H.Write ("next numbir");
+
+number3 = H.ReadInt();
+
+resp = number1 + number2 + number3;
+
+H.Write ($"{resp}");
+
+}
+
 
 void Calculadora()
 {

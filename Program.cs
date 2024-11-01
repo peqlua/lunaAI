@@ -28,25 +28,35 @@
 
 //Duplicar();
 
-string não = H.Read();
-Joguinho(não);
+H.Write("sim ou não");
+
+string decisao = H.Read();
+Joguinho(decisao);
 
 
-void Joguinho (string não)
+void Joguinho(string decisao)
 {
 
-H.Write ("sim ou não");
+    if (decisao == "s")
+    {
 
-if (não == "sim")
-{
+        H.Write(@" 
+ ____ ___ __  __ 
+/ ___|_ _|  \/  |
+\___ \| || |\/| |
+ ___) | || |  | |
+|____/___|_|  |_|");
 
-H.Write ("SIM");
-
-}
-if (não == "não")
-{
- H.Write ("NÃO"); 
-}
+    }
+    if (decisao == "n")
+    {
+        H.Write(@" 
+            _   _  /\/| ___  
+           | \ | ||/\/ / _ \ 
+           |  \| | /_\| | | |
+           | |\  |/ _ \ |_| |
+           |_| \_/_/ \_\___/ ");
+    }
 
 }
 
@@ -54,13 +64,13 @@ if (não == "não")
 void Duplicar()
 {
 
-int pessoa;
+    int pessoa;
 
-int person = H.ReadInt();
+    int person = H.ReadInt();
 
-pessoa = Duplicador(person);
+    pessoa = Duplicador(person);
 
-H.Write ($"{pessoa}");
+    H.Write($"{pessoa}");
 
 }
 
@@ -68,11 +78,11 @@ H.Write ($"{pessoa}");
 int Duplicador(int num)
 {
 
-int vzs;
+    int vzs;
 
-vzs = num * 2;
+    vzs = num * 2;
 
-return vzs;
+    return vzs;
 
 }
 

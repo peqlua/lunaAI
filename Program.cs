@@ -34,7 +34,7 @@ string decisao = H.Read();
 Joguinho(decisao);
 
 
-void Joguinho(string decisao)
+void Joguinho(string decisao) 
 {
 
     if (decisao == "s")

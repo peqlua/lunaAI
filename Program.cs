@@ -1,42 +1,144 @@
 ﻿
 //QualAnimal();
+
 //Question();
+
 //Jogo();
+
 //Adivinha();
+
 //GostaDeAnime();
+
 //Vezes();
+
 //Iniciador();
+
 //Contador();
+
 //Calculadora();
-N123();
+
+//N123();
+
+//Player();
+
+//Estrelinhas();
+
+//int v = Soma(100,45);
+//H.Write ($"soma = {v}");
+
+//Duplicar();
+
+string não = H.Read();
+Joguinho(não);
+
+
+void Joguinho (string não)
+{
+
+H.Write ("sim ou não");
+
+if (não == "sim")
+{
+
+H.Write ("SIM");
+
+}
+if (não == "não")
+{
+ H.Write ("NÃO"); 
+}
+
+}
+
+
+void Duplicar()
+{
+
+int pessoa;
+
+int person = H.ReadInt();
+
+pessoa = Duplicador(person);
+
+H.Write ($"{pessoa}");
+
+}
+
+
+int Duplicador(int num)
+{
+
+int vzs;
+
+vzs = num * 2;
+
+return vzs;
+
+}
+
+
+int Soma(int n1, int n2)
+{
+    return n1 + n2;
+}
+
+
+void Estrelinhas()
+{
+
+    H.Write("#####################################################");
+
+}
+
+
+void Player()
+{
+
+    int value = 0;
+
+    int total = 0;
+
+    while (true)
+    {
+
+        value = H.ReadInt();
+
+        total = total + value;
+
+        if (value == 0)
+        {
+
+            break;
+
+        }
+
+    }
+
+    H.Write($"SUA CONTA {total}$/£ SENHOR/SENHORITA");
+
+}
+
 
 void N123()
 {
+    int total = 0;
+    int value = 0;
 
-int number1;
 
-int number2;
+    H.Write("Digite os valores e de <ENTER> ou ZERO para sair.");
 
-int number3;
+    while (true)
+    {
+        value = H.ReadInt();
+        total = total + value;
 
-int resp;
+        if (value == 0)
+        {
+            break;
+        }
+    }
 
-H.Write ("dijite 3 numeros um de cada vez, e eles vão se somar-(º^º)- -podi credita-");
-
-number1 = H.ReadInt();
-
-H.Write ("next numbir");
-
-number2 = H.ReadInt();
-
-H.Write ("next numbir");
-
-number3 = H.ReadInt();
-
-resp = number1 + number2 + number3;
-
-H.Write ($"{resp}");
-
+    H.Write($"TOTAL: {total}");
 }
 
 
@@ -47,7 +149,7 @@ void Calculadora()
 
     int n2 = 0;
 
- n1 = H.ReadInt();
+    n1 = H.ReadInt();
 
     n2 = H.ReadInt();
 
@@ -292,5 +394,3 @@ void Question()
     }
 
 }
-
-

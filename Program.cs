@@ -28,13 +28,52 @@
 
 //Duplicar();
 
-H.Write("sim ou não");
+//H.Write("sim ou não");
 
-string decisao = H.Read();
-Joguinho(decisao);
+//string decisao = H.Read();
+//Joguinho(decisao);
+
+Senhoria();
+
+void Senhoria()
+{
+
+    string pessoas;
+
+    string letra;
+
+    string first = "";
+
+    string saudacao = "";
+
+    H.Write("Qual é o seu nome?");
+
+    pessoas = H.Read();
+
+    letra = pessoas.Last().ToString();
+
+first = pessoas.First().ToString();
+
+    if (letra == "a")
+    {
+
+        saudacao = "senhora";
+
+    }
+    else
+    if (letra == "o")
+    {
+
+        saudacao = "senhor";
+
+    }
+
+    H.Write($"Bem vindo ao meu programa {saudacao} grande {first} {pessoas}");
+
+}
 
 
-void Joguinho(string decisao) 
+void Joguinho(string decisao)
 {
 
     if (decisao == "s")

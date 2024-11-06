@@ -33,7 +33,94 @@
 //string decisao = H.Read();
 //Joguinho(decisao);
 
-Senhoria();
+//Senhoria();
+
+Adivinhaanimal();
+
+void Adivinhaanimal()
+{
+
+    string animal = "elefante";
+
+    string tentativa;
+
+    int rodada = 0;
+
+    H.Write("qual é o animal que estou pensando?");
+
+    while (true)
+    {
+
+        rodada = rodada + 1;
+
+        tentativa = H.Read();
+
+        if (tentativa == "elefante")
+        {
+
+            H.Write("vc ganhou");
+
+            break;
+
+        }
+        else
+        {
+
+            H.Write($"vc errou na rodada {rodada}");
+
+            if (rodada == 1)
+            {
+
+                H.Write("é grande");
+
+            }
+            else
+            if (rodada == 2)
+
+            {
+
+                H.Write("é cinza");
+
+            }
+            else
+            if (rodada == 3)
+
+            {
+
+                H.Write("tem orelhas grandes");
+
+            }
+            else
+            if (rodada == 4)
+
+            {
+
+                H.Write("tem uma tromba");
+
+            }
+            else
+            if (rodada == 5)
+
+            {
+
+                H.Write("não tem pelo");
+
+            }
+            else
+            {
+
+                H.Write("perdeu era elefante");
+
+                break;
+
+            }
+
+        }
+
+    }
+
+}
+
 
 void Senhoria()
 {
@@ -52,7 +139,7 @@ void Senhoria()
 
     letra = pessoas.Last().ToString();
 
-first = pessoas.First().ToString();
+    first = pessoas.First().ToString();
 
     if (letra == "a")
     {

@@ -41,6 +41,7 @@
 
 //ListaNomes();
 
+
 AdivinhaCor();
 
 
@@ -49,6 +50,8 @@ void AdivinhaCor()
 
     List<string> cores = new List<string> { "amarelo", "verde", "azul", "roxo", "rosa", "laranja" };
 
+    List<string> dicas = new List<string> { "sol", "arvore", "céu", "berinjela", "flamingo", "laranjinha" };
+
     string cor;
 
     int i = 0;
@@ -56,7 +59,8 @@ void AdivinhaCor()
     int random = H.Random(0, 5);
 
     H.Write("QUAL COR FOI SORTEADA?");
-H.Write(random);
+
+H.Write (dicas[random]);
 
     while (i < 6)
     {

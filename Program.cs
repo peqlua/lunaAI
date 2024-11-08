@@ -69,7 +69,7 @@ H.Write(random);
 
     cor = H.Read();
 
-    if (cor == cores[i])
+    if (cor == cores[random])
     {
 
         H.Write("vc venceu");

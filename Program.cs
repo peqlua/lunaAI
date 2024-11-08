@@ -35,12 +35,81 @@
 
 //Senhoria();
 
-Adivinhaanimal();
+//Adivinhaanimal();
+
+//List<string> nomes = new List<string> { "Joao", "aa", "pp", "Zaza", "zuzu" };
+
+//ListaNomes();
+
+AdivinhaCor();
+
+
+void AdivinhaCor()
+{
+
+    List<string> cores = new List<string> { "amarelo", "verde", "azul", "roxo", "rosa", "laranja" };
+
+    string cor;
+
+    int i = 0;
+
+    int random = H.Random(0, 5);
+
+    H.Write("QUAL COR FOI SORTEADA?");
+H.Write(random);
+
+    while (i < 6)
+    {
+
+        H.Write (cores[i]);
+
+        i = i + 1 ;
+
+    }
+
+    cor = H.Read();
+
+    if (cor == cores[i])
+    {
+
+        H.Write("vc venceu");
+
+    }
+    else 
+    {
+        H.Write ("vc perdeu");
+    }
+
+}
+
+
+void ListaNomes()
+{
+
+    List<string> nomes = new List<string> { "João", "Maria", "e", "a", "Dona Cutia" };
+
+    int ident = 0;
+
+    int randomic = H.Random(0, 4);
+
+    while (ident < 5)
+    {
+
+        H.Write(nomes[ident]);
+
+        ident = ident + 1;
+
+    }
+
+    H.Write("o vencedor é " + nomes[randomic]);
+
+}
+
 
 void Adivinhaanimal()
 {
 
-    string animal = "elefante";
+    string animal = "canguru ";
 
     string tentativa;
 
@@ -55,7 +124,7 @@ void Adivinhaanimal()
 
         tentativa = H.Read();
 
-        if (tentativa == "elefante")
+        if (tentativa == "canguru")
         {
 
             H.Write("vc ganhou");
@@ -79,7 +148,7 @@ void Adivinhaanimal()
 
             {
 
-                H.Write("é cinza");
+                H.Write("é castanho");
 
             }
             else
@@ -95,7 +164,7 @@ void Adivinhaanimal()
 
             {
 
-                H.Write("tem uma tromba");
+                H.Write("tem uma pernona");
 
             }
             else
@@ -103,13 +172,13 @@ void Adivinhaanimal()
 
             {
 
-                H.Write("não tem pelo");
+                H.Write("tem pelo");
 
             }
             else
             {
 
-                H.Write("perdeu era elefante");
+                H.Write("perdeu era canguru");
 
                 break;
 

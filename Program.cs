@@ -1,4 +1,8 @@
-﻿
+﻿using System;
+using System.Globalization;
+using System.Threading;
+
+
 //QualAnimal();
 
 //Question();
@@ -49,11 +53,45 @@ Aniversário();
 
 void Aniversário()
 {
+    
+    DateTime date = DateTime.Now;
+
+    DateTime now = DateTime.Now;
 
     int anos = 0;
 
-    
+    int mes = 0;
 
+    int dia = 0;
+
+    H.Write(" quantos anos vc tem?");
+
+    anos = H.ReadInt();
+
+    H.Write("qual é o mês do seu aniversário?");
+
+    mes = H.ReadInt();
+
+    H.Write(" que dia é seu niver?");
+
+    dia = H.ReadInt();
+
+    if (mes > now.Month)
+    {
+        anos = anos + 1;
+    }else
+    if (mes == now.Month && now.Day < dia )
+    {
+
+        anos = anos + 1;
+
+    }
+
+    date = new DateTime(now.Year - anos, mes, dia);
+
+    H.Write ($"vc naceu no ano de {date.Year}");
+
+    H.Write ($"vc naceu numa {date.DayOfWeek}");
 
 }
 

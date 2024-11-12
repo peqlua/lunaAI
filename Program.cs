@@ -41,8 +41,51 @@
 
 //ListaNomes();
 
+//AdivinhaCor();
 
-AdivinhaCor();
+//ABC();
+
+Aniversário();
+
+void Aniversário()
+{
+
+    int anos = 0;
+
+    
+
+
+}
+
+
+void ABC()
+{
+
+    List<string> abc = new List<string> {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p",
+    "q","r","s","t","u","v","w","x","y","z"};
+
+    int escolhido = 0;
+
+    int i = 0;
+
+    H.Write("dijite a posisão da letra do abc que vc quer que apareça");
+
+    escolhido = H.ReadInt();
+
+    escolhido = escolhido - 1;
+
+    H.Write(abc[escolhido]);
+
+    while (i < 26)
+    {
+
+        H.Write(abc[i]);
+
+        i = i + 1;
+
+    }
+
+}
 
 
 void AdivinhaCor()
@@ -52,6 +95,9 @@ void AdivinhaCor()
 
     List<string> dicas = new List<string> { "sol", "arvore", "céu", "berinjela", "flamingo", "laranjinha" };
 
+    List<string> respostas = new List<string> {"acertou era amarelo","acertou era verde","acertou era azul",
+    "acertou era roxo","acertou era rosa","acertou era laranja"};
+
     string cor;
 
     int i = 0;
@@ -60,14 +106,14 @@ void AdivinhaCor()
 
     H.Write("QUAL COR FOI SORTEADA?");
 
-H.Write (dicas[random]);
+    H.Write(dicas[random]);
 
     while (i < 6)
     {
 
-        H.Write (cores[i]);
+        H.Write(cores[i]);
 
-        i = i + 1 ;
+        i = i + 1;
 
     }
 
@@ -76,12 +122,12 @@ H.Write (dicas[random]);
     if (cor == cores[random])
     {
 
-        H.Write("vc venceu");
+        H.Write(respostas[random]);
 
     }
-    else 
+    else
     {
-        H.Write ("vc perdeu");
+        H.Write("vc perdeu");
     }
 
 }

@@ -49,7 +49,45 @@ using System.Threading;
 
 //ABC();
 
-Aniversário();
+//Aniversário();
+
+CriadorHistorias();
+
+void CriadorHistorias()
+{
+
+    List<string> lugar = new List<string> {"na praia","no parque","na floresta","no dezerto","no mar"};
+
+    List<string> persona = new List<string> {"havia um homem","havia uma mulher","havia um cão","havia uma menina","havia um ladrão"};
+
+    List<string> acao = new List<string> {"que queria ficar rico/a","que queria comer até não aguentar","que queria brincar","que queria sorrir","que queria dançar"};
+
+    List<string> final = new List<string> {"viveu feliz para sempre","morreu de velhiçe","encontrou um livro mágico","viveu para sempre","comeu e bebeu até o fim da sua vida"};
+
+    int random1 = H.Random(0,4);
+    int i1 = random1;
+
+    int random2 = H.Random(0,4);
+    int i2 = random2;
+
+    int random3 = H.Random(0,4);
+    int i3 = random3;
+
+    int random4 = H.Random(0,4);
+    int i4 = random4;
+
+
+
+H.Write(lugar[i1]);
+
+H.Write(persona[i2]);
+
+H.Write(acao[i3]);
+
+H.Write(final[i4]);
+
+}
+
 
 void Aniversário()
 {

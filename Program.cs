@@ -58,43 +58,43 @@ void CriadorHistorias()
 
     string sair;
 
-    List<string> lugar = new List<string> {"na praia","no parque","na floresta","no deserto","no mar"};
+    List<string> lugar = new List<string> { "na praia", "no parque", "na floresta", "no deserto", "no mar" };
 
-    List<string> persona = new List<string> {"havia um homem","havia uma mulher","havia um cão","havia uma menina","havia um ladrão"};
+    List<string> persona = new List<string> { "havia um homem", "havia uma mulher", "havia um cão", "havia uma menina", "havia um ladrão" };
 
-    List<string> acao = new List<string> {"que queria ficar rico/a","que queria comer até não aguentar","que queria brincar","que queria sorrir","que queria dançar"};
+    List<string> acao = new List<string> { "que queria ficar rico/a", "que queria comer até não aguentar", "que queria brincar", "que queria sorrir", "que queria dançar" };
 
-    List<string> final = new List<string> {"viveu feliz para sempre","morreu de velhiçe","encontrou um livro mágico","seu cabelo nao parou de crescer e o planeta terra ficou cabeludo","comeu e bebeu até o fim da sua vida"};
-    
+    List<string> final = new List<string> { "viveu feliz para sempre", "morreu de velhiçe", "encontrou um livro mágico", "seu cabelo nao parou de crescer e o planeta terra ficou cabeludo", "comeu e bebeu até o fim da sua vida" };
+
     while (true)
     {
 
-    int i1 = H.Random(0,4);
-    
-    int i2 = H.Random(0,4);
+        int i1 = H.Random(0, 4);
 
-    int i3 = H.Random(0,4);
+        int i2 = H.Random(0, 4);
 
-    int i4 = H.Random(0,4);
+        int i3 = H.Random(0, 4);
 
-H.Write(lugar[i1]);
+        int i4 = H.Random(0, 4);
 
-H.Write(persona[i2]);
+        H.Write(lugar[i1]);
 
-H.Write(acao[i3]);
+        H.Write(persona[i2]);
 
-H.Write(final[i4]);
+        H.Write(acao[i3]);
 
-H.Write("vc quer sair");
+        H.Write(final[i4]);
 
-sair = H.Read();
+        H.Write("vc quer sair");
 
-if (sair == "sim")
-{
+        sair = H.Read();
 
-    break;
+        if (sair == "sim")
+        {
 
-}
+            break;
+
+        }
 
     }
 
@@ -103,7 +103,7 @@ if (sair == "sim")
 
 void Aniversário()
 {
-    
+
     DateTime date = DateTime.Now;
 
     DateTime now = DateTime.Now;
@@ -129,8 +129,9 @@ void Aniversário()
     if (mes > now.Month)
     {
         anos = anos + 1;
-    }else
-    if (mes == now.Month && now.Day < dia )
+    }
+    else
+    if (mes == now.Month && now.Day < dia)
     {
 
         anos = anos + 1;
@@ -139,9 +140,9 @@ void Aniversário()
 
     date = new DateTime(now.Year - anos, mes, dia);
 
-    H.Write ($"vc naceu no ano de {date.Year}");
+    H.Write($"vc naceu no ano de {date.Year}");
 
-    H.Write ($"vc naceu numa {date.DayOfWeek}");
+    H.Write($"vc naceu numa {date.DayOfWeek}");
 
 }
 
@@ -492,7 +493,7 @@ void Calculadora()
 
     int n2 = 0;
 
-    H.Write ("dijite dois numeros para se multiplicarem 😄");
+    H.Write("dijite dois numeros para se multiplicarem 😄");
 
     n1 = H.ReadInt();
 
@@ -527,25 +528,141 @@ void Iniciador()
     while (sair == "n")
     {
 
-        H.Write ("Para jogar GOSTA DE ANIME digite 1, para jogar CALCULADORA digite 2, para jogar VEZES digite 3.");
+        H.Write("Para jogar CRIADORHISTÓRIAS digite 1 ");
+        H.Write("Para jogar ANIVERSÁRIO digite 2");
+        H.Write("Para jogar ABC digite 3");
+        H.Write("Para jogar ADIVINHACOR digite 4");
+        H.Write("Para jogar LISTANOMES digite 5");
+        H.Write("Para jogar ADIVINHAANIMAL digite 6");
+        H.Write("Para jogar SENHORIA digite 7");
+        // H.Write ("Para jogar JOGINHO digite 8");
+        H.Write("Para jogar DUPLICAR digite 9");
+        // H.Write ("Para jogar SOMA digite 10");
+        H.Write("Para jogar ESTRELINHAS digite 11");
+        H.Write("Para jogar PLAYER digite 12");
+        H.Write("Para jogar N123 digite 13");
+        H.Write("Para jogar CALCULADORA digite 14");
+        H.Write("Para jogar CONTADOR digite 15");
+        H.Write("Para jogar Vezes digite 16");
+        H.Write("Para jogar GostaDeAnime digite 17");
+        H.Write("Para jogar Adivinha digite 18");
+        H.Write("Para jogar Jogo digite 19");
+        H.Write("Para jogar QualAnimal digite 20");
+        H.Write("Para jogar Question digite 21");
+
+        //H.Write (" Vezes GostaDeAnime Adivinha Jogo QualAnimal Question");
+
         H.Write("Você quer sair? Digite 0.");
         sair = H.Read();
         if (sair == "0")
         {
             sair = sair;
-        }else
-            if (sair == "1") 
-            {
-                GostaDeAnime();
-            }else
+        }
+        else
+            if (sair == "1")
+        {
+            CriadorHistorias();
+        }
+        else
                 if (sair == "2")
-                {
-                    Calculadora();
-                }else
+        {
+            Aniversário();
+        }
+        else
                     if (sair == "3")
-                    {
-                        Vezes();
-                    }
+        {
+            ABC();
+        }
+        else
+                    if (sair == "4")
+        {
+            AdivinhaCor();
+        }
+        else
+                    if (sair == "5")
+        {
+            ListaNomes();
+        }
+        else
+                    if (sair == "6")
+        {
+            Adivinhaanimal();
+        }
+        else
+                    if (sair == "7")
+        {
+            Senhoria();
+        }
+        else
+                    if (sair == "8")
+        {
+
+        }
+        else
+                    if (sair == "9")
+        {
+            Duplicar();
+        }
+        else
+                    if (sair == "10")
+        {
+
+        }
+        else
+                    if (sair == "11")
+        {
+            Estrelinhas();
+        }
+        else
+                    if (sair == "12")
+        {
+            Player();
+        }
+        else
+                    if (sair == "13")
+        {
+            N123();
+        }
+        else
+                    if (sair == "14")
+        {
+            Calculadora();
+        }
+        else
+                    if (sair == "15")
+        {
+            Contador();
+        }
+        else
+                    if (sair == "16")
+        {
+            Vezes();
+        }
+        else
+                    if (sair == "17")
+        {
+            GostaDeAnime();
+        }
+        else
+                    if (sair == "18")
+        {
+            Adivinha();
+        }
+        else
+                    if (sair == "19")
+        {
+            Jogo();
+        }
+        else
+                    if (sair == "20")
+        {
+            QualAnimal();
+        }
+        else
+                    if (sair == "21")
+        {
+            Question();
+        }
 
     }
 
@@ -623,7 +740,7 @@ void GostaDeAnime()
 
         Console.WriteLine("de qual?");
 
-        qual =Console.ReadLine();
+        qual = Console.ReadLine();
         qual = qual.ToUpper();
         if (qual == "ONE PIECE" || qual == "SPY X FAMILY" || qual == "LOVE IS WAR" || qual == "NARUTO" || qual == "MY LITLE WICH ACADEMIA" || qual == "ASASINATION CLASSROOM")
         {

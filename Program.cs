@@ -15,7 +15,7 @@ using System.Threading;
 
 //Vezes();
 
-//Iniciador();
+Iniciador();
 
 //Contador();
 
@@ -51,35 +51,31 @@ using System.Threading;
 
 //Aniversário();
 
-CriadorHistorias();
+//CriadorHistorias();
 
 void CriadorHistorias()
 {
 
     string sair;
 
-    List<string> lugar = new List<string> {"na praia","no parque","na floresta","no dezerto","no mar"};
+    List<string> lugar = new List<string> {"na praia","no parque","na floresta","no deserto","no mar"};
 
     List<string> persona = new List<string> {"havia um homem","havia uma mulher","havia um cão","havia uma menina","havia um ladrão"};
 
     List<string> acao = new List<string> {"que queria ficar rico/a","que queria comer até não aguentar","que queria brincar","que queria sorrir","que queria dançar"};
 
-    List<string> final = new List<string> {"viveu feliz para sempre","morreu de velhiçe","encontrou um livro mágico","viveu para sempre","comeu e bebeu até o fim da sua vida"};
+    List<string> final = new List<string> {"viveu feliz para sempre","morreu de velhiçe","encontrou um livro mágico","seu cabelo nao parou de crescer e o planeta terra ficou cabeludo","comeu e bebeu até o fim da sua vida"};
     
     while (true)
     {
 
-    int random1 = H.Random(0,4);
-    int i1 = random1;
+    int i1 = H.Random(0,4);
+    
+    int i2 = H.Random(0,4);
 
-    int random2 = H.Random(0,4);
-    int i2 = random2;
+    int i3 = H.Random(0,4);
 
-    int random3 = H.Random(0,4);
-    int i3 = random3;
-
-    int random4 = H.Random(0,4);
-    int i4 = random4;
+    int i4 = H.Random(0,4);
 
 H.Write(lugar[i1]);
 
@@ -496,6 +492,8 @@ void Calculadora()
 
     int n2 = 0;
 
+    H.Write ("dijite dois numeros para se multiplicarem 😄");
+
     n1 = H.ReadInt();
 
     n2 = H.ReadInt();
@@ -529,12 +527,29 @@ void Iniciador()
     while (sair == "n")
     {
 
-        GostaDeAnime();
-        H.Write("vc quer sair");
+        H.Write ("Para jogar GOSTA DE ANIME digite 1, para jogar CALCULADORA digite 2, para jogar VEZES digite 3.");
+        H.Write("Você quer sair? Digite 0.");
         sair = H.Read();
+        if (sair == "0")
+        {
+            sair = sair;
+        }else
+            if (sair == "1")
+            {
+                GostaDeAnime();
+            }else
+                if (sair == "2")
+                {
+                    Calculadora();
+                }else
+                    if (sair == "3")
+                    {
+                        Vezes();
+                    }
+
     }
 
-    H.Write("vc conseguiu sair");
+    H.Write("Conseguiu sair! Volte logo! 😄");
 
 }
 
@@ -598,7 +613,7 @@ void GostaDeAnime()
 
     Console.WriteLine("vc gosta de anime? sim/não");
 
-    people = (Console.ReadLine());
+    people = Console.ReadLine();
 
     if (people.ToUpper() == "SIM")
     {
@@ -608,7 +623,7 @@ void GostaDeAnime()
 
         Console.WriteLine("de qual?");
 
-        qual = (Console.ReadLine());
+        qual =Console.ReadLine();
         qual = qual.ToUpper();
         if (qual == "ONE PIECE" || qual == "SPY X FAMILY" || qual == "LOVE IS WAR" || qual == "NARUTO" || qual == "MY LITLE WICH ACADEMIA" || qual == "ASASINATION CLASSROOM")
         {
@@ -626,7 +641,7 @@ void GostaDeAnime()
 
         Console.WriteLine("de desenho animado vc gosta então?");
 
-        oque = (Console.ReadLine());
+        oque = Console.ReadLine();
 
         if (oque.ToUpper() == "CARROSEL")
         {

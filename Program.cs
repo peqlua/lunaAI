@@ -534,7 +534,7 @@ void Iniciador()
         {
             sair = sair;
         }else
-            if (sair == "1")
+            if (sair == "1") 
             {
                 GostaDeAnime();
             }else

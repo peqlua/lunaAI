@@ -15,7 +15,7 @@ using System.Threading;
 
 //Vezes();
 
-Iniciador();
+//Iniciador();
 
 //Contador();
 
@@ -52,6 +52,82 @@ Iniciador();
 //Aniversário();
 
 //CriadorHistorias();
+
+JogadorDados();
+
+void JogadorDados()
+{
+
+    int i = 0;
+
+    List<int> jogadas = new List<int>();
+
+    int placar1 = 0;
+    int placar2 = 0;
+    int placar3 = 0;
+    int placar4 = 0;
+    int placar5 = 0;
+    int placar6 = 0;
+
+    while (i <= 1000)
+    {
+        jogadas.Add(H.Random(1, 6));
+
+        i = i + 1;
+    }
+
+    i = 0;
+
+    string result = "";
+
+    while (i <= 1000)
+    {
+        result = result + " " + jogadas[i];
+        i = i + 1;
+
+    }
+
+    H.Write(result);
+
+    i = 0;
+
+    while (i <= 1000)
+    {
+        if (jogadas[i] == 1)
+        {
+            placar1 = placar1 + 1;
+        }
+        if (jogadas[i] == 2)
+        {
+            placar2 = placar2 + 1;
+        }
+        if (jogadas[i] == 3)
+        {
+            placar3 = placar3 + 1;
+        }
+        if (jogadas[i] == 4)
+        {
+            placar4 = placar4 + 1;
+        }
+        if (jogadas[i] == 5)
+        {
+            placar5 = placar5 + 1;
+        }
+        if (jogadas[i] == 6)
+        {
+            placar6 = placar6 + 1;
+        }
+        i = i + 1;
+    }
+    H.Write($"placar1={placar1}");
+    H.Write($"placar2={placar2}");
+    H.Write($"placar3={placar3}");
+    H.Write($"placar4={placar4}");
+    H.Write($"placar5={placar5}");
+    H.Write($"placar6={placar6}");
+
+}
+
 
 void CriadorHistorias()
 {

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Globalization;
-using System.Threading;
-
-
-//QualAnimal();
+﻿//QualAnimal();
 
 //Question();
 
@@ -69,7 +64,34 @@ void JogadorDados()
     int placar5 = 0;
     int placar6 = 0;
 
-    while (i <= 1000)
+    int maior = 0;
+
+    int menor = 1000;
+
+    int sortudo = 0;
+
+    int azarado = 1000;
+
+    int anterior = 0;
+
+    int repetir1 = 0;
+    int repetir2 = 0;
+    int repetir3 = 0;
+    int repetir4 = 0;
+    int repetir5 = 0;
+    int repetir6 = 0;
+
+    int maioria = 0;
+
+    int menoria = 1000;
+
+    int maioriaqt = 0;
+
+    int menoriaqt = 1000;
+
+    int value = 5000;
+
+    while (i <= value)
     {
         jogadas.Add(H.Random(1, 6));
 
@@ -80,7 +102,7 @@ void JogadorDados()
 
     string result = "";
 
-    while (i <= 1000)
+    while (i <= value)
     {
         result = result + " " + jogadas[i];
         i = i + 1;
@@ -91,33 +113,65 @@ void JogadorDados()
 
     i = 0;
 
-    while (i <= 1000)
+    while (i <= value)
     {
         if (jogadas[i] == 1)
         {
             placar1 = placar1 + 1;
+            if (anterior == 1)
+            {
+                repetir1 = repetir1 + 1;
+            }
+            anterior = 1;
         }
         if (jogadas[i] == 2)
         {
             placar2 = placar2 + 1;
+            if (anterior == 1)
+            {
+                repetir2 = repetir2 + 1;
+            }
+            anterior = 2;
         }
         if (jogadas[i] == 3)
         {
             placar3 = placar3 + 1;
+            if (anterior == 1)
+            {
+                repetir3 = repetir3 + 1;
+            }
+            anterior = 3;
         }
         if (jogadas[i] == 4)
         {
             placar4 = placar4 + 1;
+            if (anterior == 1)
+            {
+                repetir4 = repetir4 + 1;
+            }
+            anterior = 4;
         }
         if (jogadas[i] == 5)
         {
             placar5 = placar5 + 1;
+            if (anterior == 1)
+            {
+                repetir5 = repetir5 + 1;
+            }
+            anterior = 5;
         }
         if (jogadas[i] == 6)
         {
             placar6 = placar6 + 1;
+            if (anterior == 1)
+            {
+                repetir6 = repetir6 + 1;
+            }
+            anterior = 6;
         }
         i = i + 1;
+
+
     }
     H.Write($"placar1={placar1}");
     H.Write($"placar2={placar2}");
@@ -125,6 +179,157 @@ void JogadorDados()
     H.Write($"placar4={placar4}");
     H.Write($"placar5={placar5}");
     H.Write($"placar6={placar6}");
+
+    if (maior < placar1)
+    {
+        maior = placar1;
+        sortudo = 1;
+    }
+    if (maior < placar2)
+    {
+        maior = placar2;
+        sortudo = 2;
+    }
+    if (maior < placar3)
+    {
+        maior = placar3;
+        sortudo = 3;
+    }
+    if (maior < placar4)
+    {
+        maior = placar4;
+        sortudo = 4;
+    }
+    if (maior < placar5)
+    {
+        maior = placar5;
+        sortudo = 5;
+    }
+    if (maior < placar6)
+    {
+        maior = placar6;
+        sortudo = 6;
+    }
+
+    if (menor > placar1)
+    {
+        menor = placar1;
+        azarado = 1;
+    }
+    if (menor > placar2)
+    {
+        menor = placar2;
+        azarado = 2;
+    }
+    if (menor > placar3)
+    {
+        menor = placar3;
+        azarado = 3;
+    }
+    if (menor > placar4)
+    {
+        menor = placar4;
+        azarado = 4;
+    }
+    if (menor > placar5)
+    {
+        menor = placar5;
+        azarado = 5;
+    }
+    if (menor > placar6)
+    {
+        menor = placar6;
+        azarado = 6;
+    }
+
+
+    if (maioria < repetir1)
+    {
+        maioria = repetir1;
+        maioriaqt = 1;
+    }
+    if (maioria < repetir2)
+    {
+        maioria = repetir2;
+        maioriaqt = 2;
+    }
+    if (maioria < repetir3)
+    {
+        maioria = repetir3;
+        maioriaqt = 3;
+    }
+    if (maioria < repetir4)
+    {
+        maioria = repetir4;
+        maioriaqt = 4;
+    }
+    if (maioria < repetir5)
+    {
+        maioria = repetir5;
+        maioriaqt = 5;
+    }
+    if (maioria < repetir6)
+    {
+        maioria = repetir6;
+        maioriaqt = 6;
+    }
+
+
+    if (menoria > repetir1)
+    {
+        menoria = repetir1;
+        menoriaqt = 1;
+    }
+    if (menoria > repetir2)
+    {
+        menoria = repetir2;
+        menoriaqt = 2;
+    }
+    if (menoria > repetir3)
+    {
+        menoria = repetir3;
+        menoriaqt = 3;
+    }
+    if (menoria > repetir4)
+    {
+        menoria = repetir4;
+        menoriaqt = 4;
+    }
+    if (menoria > repetir5)
+    {
+        menoria = repetir5;
+        menoriaqt = 5;
+    }
+    if (menoria > repetir6)
+    {
+        menoria = repetir6;
+        menoriaqt = 6;
+    }
+
+
+    H.Write($"maior:{maior}");
+
+    H.Write($"menor:{menor}");
+
+    H.Write($"sortudo: {sortudo}");
+
+    H.Write($"azarado: {azarado}");
+
+    H.Write($"quem repitiu mais foi o {maioriaqt}");
+
+    H.Write($"quem repitiu menos vezes foi o {menoriaqt}");
+
+    H.Write($"o numero um se repitiu {repetir1} vezes segidas");
+
+    H.Write($"o numero dois se repitiu {repetir2} vezes seguidas");
+
+    H.Write($"o numero tres se repitiu {repetir3} vezes segidas");
+
+    H.Write($"o numero quatro se repitiu {repetir4} vezes segidas");
+
+    H.Write($"o numero cinco se repitiu {repetir5} vezes segidas");
+
+    H.Write($"o numero seis se repitiu {repetir6} vezes segidas");
 
 }
 

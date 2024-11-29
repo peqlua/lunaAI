@@ -8,7 +8,7 @@
 
 //GostaDeAnime();
 
-//Vezes();
+Vezes();
 
 //Iniciador();
 
@@ -48,7 +48,144 @@
 
 //CriadorHistorias();
 
-JogadorDados();
+//JogadorDados();
+
+//JogadorDadosImproviment();
+
+
+void JogadorDadosImproviment()
+{
+
+    int jogadasQt = 5000;
+
+    int ladosQt = 6;
+
+    int i = 0;
+
+    Dictionary<int, int> jogadas = new Dictionary<int, int>();
+
+    Dictionary<int, int> placar = new Dictionary<int, int>();
+
+    int maior = 0;
+
+    int menor = jogadasQt;
+
+    int sortudo = 0;
+
+    int azarado = jogadasQt;
+
+    int anterior = 0;
+
+    Dictionary<int, int> repetir = new Dictionary<int, int>(ladosQt);
+
+
+    int maioria = 0;
+
+    int menoria = jogadasQt;
+
+    int maioriaqt = 0;
+
+    int menoriaqt = jogadasQt;
+
+    i = 0;
+    string result = "";
+
+    while (i <= jogadasQt)
+    {
+        jogadas[i] = H.Random(1, ladosQt);
+
+        result = result + " " + jogadas[i];
+        i = i + 1;
+    }
+
+    H.Write(result);
+
+    i = 0;
+
+    while (i <= jogadasQt)
+    {
+        int j = 0;
+        while (j < ladosQt)
+        {
+            if (jogadas[i] == j + 1)
+            {
+                placar[j] = placar.GetValueOrDefault(j, 0) + 1;
+
+                if (anterior == j)
+                {
+                    repetir[j] = repetir.GetValueOrDefault(j, 0) + 1;
+                }
+                anterior = j;
+            }
+            j = j + 1;
+        }
+        i = i + 1;
+    }
+
+    int z = 0;
+
+    while (z < ladosQt)
+    {
+        H.Write($"placar {z} ={placar[z]}");
+
+        if (maior < placar[z])
+        {
+            maior = placar[z];
+            sortudo = 1;
+        }
+
+
+        if (menor > placar[z])
+        {
+            menor = placar[z];
+            azarado = 1;
+        }
+
+        if (maioria < repetir[z])
+        {
+            maioria = repetir[z];
+            maioriaqt = 1;
+        }
+
+
+        if (menoria > repetir[z])
+        {
+            menoria = repetir[z];
+            menoriaqt = 1;
+        }
+
+        z = z + 1;
+
+    }
+
+    int a = 0;
+
+    while (
+    a < ladosQt
+    )
+    {
+
+
+        H.Write($"o numero {a} se repitiu {repetir[a]} vezes segidas");
+        a = a + 1;
+    }
+
+    H.Write($"maior:{maior}");
+
+    H.Write($"menor:{menor}");
+
+    H.Write($"sortudo: {sortudo}");
+
+    H.Write($"azarado: {azarado}");
+
+    H.Write($"quem repitiu mais foi o {maioriaqt}");
+
+    H.Write($"quem repitiu menos vezes foi o {menoriaqt}");
+
+
+
+}
+
 
 void JogadorDados()
 {
@@ -961,6 +1098,13 @@ void Vezes()
 
     int cont = 0;
 
+    int recorde = H.CarregarValor<int>("recorde.txt");
+
+    string vencedor = H.CarregarValor<string>("vencedor.txt");
+
+    H.Write($"o vencedor atual é: {vencedor}");
+    H.Write($"o recorde atual é: {recorde}");
+
     while (saiu == "n")
     {
         int resposta;
@@ -998,9 +1142,23 @@ void Vezes()
         //saiu = H.Read();
     }
 
-
-
     H.Write($"vc saiu e acertou {point} vezes");
+
+    if (point > recorde)
+    {
+
+        H.Write("parabéns vc bateu o recorde, escreva seu nome");
+
+        vencedor = H.Read();
+
+        H.Write($"{vencedor} {point}");
+
+        H.SalvarValor("vencedor.txt", vencedor);
+        H.SalvarValor("recorde.txt", point);
+    }
+    
+    H.Write($"o vencedor atual é: {vencedor}");
+    H.Write($"o recorde atual é: {recorde}");
 
 }
 

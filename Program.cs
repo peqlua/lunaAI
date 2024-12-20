@@ -52,81 +52,108 @@
 
 //JogadorDadosImproviment();
 
-RPG();
+//RPG();
+
+PrimeiraClass();
+
+void PrimeiraClass()
+{
+
+    Pessoa p = new Pessoa();
+
+    p.name = "Luna";
+
+    p.age = 10;
+
+    p.height = 1.5;
+
+    p.weight = 31;
+
+    p.eyeColor = "brown";
+
+    p.hairColor = "brown";
+
+}
+
+
+
 
 void RPG()
 {
 
-string Play1;
+    string Play1;
 
-string Play2;
+    string Play2;
 
-string Play3;
+    string Play3;
 
-string Play4;
-
-
-string Play1name = H.CarregarValor<string>("Play1name.txt");
-
-string Play2name = H.CarregarValor<string>("Play2name.txt");
-
-string Play3name = H.CarregarValor<string>("Play3name.txt");
-
-string Play4name = H.CarregarValor<string>("Play4name.txt");
+    string Play4;
 
 
-string Play1nick = H.CarregarValor<string>("Play1nick.txt");
+    string Play1name = H.CarregarValor<string>("Play1name.txt");
 
-string Play2nick = H.CarregarValor<string>("Play2nick.txt");;
+    string Play2name = H.CarregarValor<string>("Play2name.txt");
 
-string Play3nick = H.CarregarValor<string>("Play4nick.txt");;
+    string Play3name = H.CarregarValor<string>("Play3name.txt");
 
-string Play4nick = H.CarregarValor<string>("Play5nick.txt");;
-
-string choice;
-
-H.Write($"player 1 = {Play1name} - {Play1nick}");
-H.Write($"player 2 = {Play2name} - {Play2nick}");
-H.Write($"player 3 = {Play3name} - {Play3nick}");
-H.Write($"player 4 = {Play4name} - {Play4nick}");
+    string Play4name = H.CarregarValor<string>("Play4name.txt");
 
 
-H.Write ("Escolha seu numero:1📘, 2🐼, 3🥰, 4💛");
+    string Play1nick = H.CarregarValor<string>("Play1nick.txt");
 
-choice = H.Read();
+    string Play2nick = H.CarregarValor<string>("Play2nick.txt"); ;
 
-H.Write ("dijite seu nome e depois seu nickname sem  a c/s entos");
+    string Play3nick = H.CarregarValor<string>("Play4nick.txt"); ;
 
-if (choice == "1")
-{
-    Play1name = H.Read();
-    Play1nick = H.Read();
-    H.SalvarValor("Play1name.txt",Play1name);
-    H.SalvarValor("Play1nick.txt",Play1nick);
-}else
-    if (choice == "2")
+    string Play4nick = H.CarregarValor<string>("Play5nick.txt"); ;
+
+    string choice;
+
+    H.Write($"player 1 = {Play1name} - {Play1nick}");
+    H.Write($"player 2 = {Play2name} - {Play2nick}");
+    H.Write($"player 3 = {Play3name} - {Play3nick}");
+    H.Write($"player 4 = {Play4name} - {Play4nick}");
+
+
+    H.Write("Escolha seu numero:1📘, 2🐼, 3🥰, 4💛");
+
+    choice = H.Read();
+
+    H.Write("dijite seu nome e depois seu nickname sem  a c/s entos");
+
+    if (choice == "1")
     {
-    Play2name = H.Read();
-    Play2nick = H.Read();
-    H.SalvarValor("Play2name.txt",Play2name);
-    H.SalvarValor("Play2nick.txt",Play2nick);
-}else
-    if (choice == "3")
-{
-Play3name = H.Read();
-Play3nick = H.Read();
-    H.SalvarValor("Play3name.txt",Play3name);
-    H.SalvarValor("Play3nick.txt",Play3nick);
-}else
-    if (choice == "4")
+        Play1name = H.Read();
+        Play1nick = H.Read();
+        H.SalvarValor("Play1name.txt", Play1name);
+        H.SalvarValor("Play1nick.txt", Play1nick);
+    }
+    else
+        if (choice == "2")
     {
-Play4name = H.Read();
-Play4nick = H.Read();
-    H.SalvarValor("Play4name.txt",Play4name);
-    H.SalvarValor("Play4nick.txt",Play4nick);
+        Play2name = H.Read();
+        Play2nick = H.Read();
+        H.SalvarValor("Play2name.txt", Play2name);
+        H.SalvarValor("Play2nick.txt", Play2nick);
+    }
+    else
+        if (choice == "3")
+    {
+        Play3name = H.Read();
+        Play3nick = H.Read();
+        H.SalvarValor("Play3name.txt", Play3name);
+        H.SalvarValor("Play3nick.txt", Play3nick);
+    }
+    else
+        if (choice == "4")
+    {
+        Play4name = H.Read();
+        Play4nick = H.Read();
+        H.SalvarValor("Play4name.txt", Play4name);
+        H.SalvarValor("Play4nick.txt", Play4nick);
     }
 
-H.Write ($"obrigado pela informação player {choice}🐋");
+    H.Write($"obrigado pela informação player {choice}🐋");
 
 }
 
@@ -1236,7 +1263,7 @@ void Vezes()
     }
     else
     {
-         H.Write($"o vencedor atual é: {vencedor}");
+        H.Write($"o vencedor atual é: {vencedor}");
         H.Write($"o recorde atual é: {recorde}");
     }
 
@@ -1357,6 +1384,7 @@ void QualAnimal()
 
 
 void Question()
+
 {
     int toys;
 
@@ -1391,4 +1419,14 @@ void Question()
         Console.WriteLine($" vc é muito pobre {name} vc só tem {toys} brinquedos kkkkkkkkkkk");
     }
 
+}
+
+class Pessoa
+{
+    public string name;
+    public int age;
+    public double height;
+    public double weight;
+    public string eyeColor;
+    public string hairColor;
 }

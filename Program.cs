@@ -54,28 +54,53 @@
 
 //RPG();
 
-PrimeiraClass();
+//PrimeiraClass();
 
-void PrimeiraClass()
+SegundaClass();
+
+void SegundaClass()
 {
 
-    Pessoa p = new Pessoa();
+var flor = new Flor();
 
-    p.name = "Luna";
+flor.Nome = "rosa";
+flor.Cor = "roxo";
+flor.Cheiro = "mel";
 
-    p.age = 10;
+flor.Exibir();
 
-    p.height = 1.5;
+var livro = new Livro();
 
-    p.weight = 31;
+livro.Nome = "harry potter";
+livro.Autor= "j.k rowling";
+livro.Grossura = "grosso";
 
-    p.eyeColor = "brown";
+livro.Exibir();
 
-    p.hairColor = "brown";
+
+var eletrodomesticos = new Eletrodomesticos();
+
+eletrodomesticos.Nome = "cadeira";
+eletrodomesticos.Cor = "branco";
+eletrodomesticos.Funçao = "sentar-se";
+
+eletrodomesticos.Exibir();
 
 }
 
 
+void PrimeiraClass()
+{
+
+   var tomate = new Produto();
+
+   tomate.Nome = "Tomate Vermelho";
+   tomate.Preco = 12;
+   tomate.Quantidade = 3;
+
+   tomate.Exibir();
+
+}
 
 
 void RPG()
@@ -1429,4 +1454,58 @@ class Pessoa
     public double weight;
     public string eyeColor;
     public string hairColor;
+}
+
+
+class Produto
+{
+    public string Nome;
+    public double Preco;
+    public int Quantidade;
+
+    public void Exibir(){
+        Console.WriteLine(Nome);
+        Console.WriteLine(Preco);
+        Console.WriteLine(Quantidade);
+    }
+}
+
+class Flor
+{
+    public string Nome;
+    public string Cor;
+    public string Cheiro;
+
+    public void Exibir()
+    {
+        Console.WriteLine(Nome);
+        Console.WriteLine(Cor);
+        Console.WriteLine(Cheiro);
+    }
+}
+class Livro
+{
+    public string Nome;
+    public string Autor;
+    public string Grossura;
+
+    public void Exibir()
+    {
+        Console.WriteLine(Nome);
+        Console.WriteLine(Autor);
+        Console.WriteLine(Grossura);
+    }
+}
+class Eletrodomesticos
+{
+    public string Nome;
+    public string Cor;
+    public string Funçao;
+
+    public void Exibir()
+    {
+        Console.WriteLine(Nome);
+        Console.WriteLine(Cor);
+        Console.WriteLine(Funçao);
+    }
 }

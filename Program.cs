@@ -56,7 +56,23 @@
 
 //PrimeiraClass();
 
-SegundaClass();
+//SegundaClass();
+
+Main();
+
+void Main()
+{
+
+var aluno = new Aluno();
+
+aluno.Nome = "Luna";
+aluno.Idade = "10";
+aluno.Nota = "A+";
+
+aluno.Exibir();
+
+}
+
 
 void SegundaClass()
 {
@@ -1508,4 +1524,20 @@ class Eletrodomesticos
         Console.WriteLine(Cor);
         Console.WriteLine(Funçao);
     }
+}
+
+class Aluno
+{
+
+public string Nome;
+public string Idade;
+public string Nota;
+
+public void Exibir()
+{
+    Console.WriteLine(Nome);
+    Console.WriteLine(Idade);
+    Console.WriteLine(Nota);
+}
+
 }

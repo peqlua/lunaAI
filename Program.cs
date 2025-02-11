@@ -58,18 +58,18 @@
 
 //SegundaClass();
 
-Main();
+//Main();
 
 void Main()
 {
 
-var aluno = new Aluno();
+    var aluno = new Aluno();
 
-aluno.Nome = "Luna";
-aluno.Idade = "10";
-aluno.Nota = "A+";
+    aluno.Nome = "Luna";
+    aluno.Idade = "10";
+    aluno.Nota = "A+";
 
-aluno.Exibir();
+    aluno.Exibir();
 
 }
 
@@ -77,30 +77,30 @@ aluno.Exibir();
 void SegundaClass()
 {
 
-var flor = new Flor();
+    var flor = new Flor();
 
-flor.Nome = "rosa";
-flor.Cor = "roxo";
-flor.Cheiro = "mel";
+    flor.Nome = "rosa";
+    flor.Cor = "roxo";
+    flor.Cheiro = "mel";
 
-flor.Exibir();
+    flor.Exibir();
 
-var livro = new Livro();
+    var livro = new Livro();
 
-livro.Nome = "harry potter";
-livro.Autor= "j.k rowling";
-livro.Grossura = "grosso";
+    livro.Nome = "harry potter";
+    livro.Autor = "j.k rowling";
+    livro.Grossura = "grosso";
 
-livro.Exibir();
+    livro.Exibir();
 
 
-var eletrodomesticos = new Eletrodomesticos();
+    var eletrodomesticos = new Eletrodomesticos();
 
-eletrodomesticos.Nome = "cadeira";
-eletrodomesticos.Cor = "branco";
-eletrodomesticos.Funçao = "sentar-se";
+    eletrodomesticos.Nome = "cadeira";
+    eletrodomesticos.Cor = "branco";
+    eletrodomesticos.Funçao = "sentar-se";
 
-eletrodomesticos.Exibir();
+    eletrodomesticos.Exibir();
 
 }
 
@@ -108,13 +108,13 @@ eletrodomesticos.Exibir();
 void PrimeiraClass()
 {
 
-   var tomate = new Produto();
+    var tomate = new Produto();
 
-   tomate.Nome = "Tomate Vermelho";
-   tomate.Preco = 12;
-   tomate.Quantidade = 3;
+    tomate.Nome = "Tomate Vermelho";
+    tomate.Preco = 12;
+    tomate.Quantidade = 3;
 
-   tomate.Exibir();
+    tomate.Exibir();
 
 }
 
@@ -1471,21 +1471,19 @@ class Pessoa
     public string eyeColor;
     public string hairColor;
 }
-
-
 class Produto
 {
     public string Nome;
     public double Preco;
     public int Quantidade;
 
-    public void Exibir(){
+    public void Exibir()
+    {
         Console.WriteLine(Nome);
         Console.WriteLine(Preco);
         Console.WriteLine(Quantidade);
     }
 }
-
 class Flor
 {
     public string Nome;
@@ -1525,19 +1523,39 @@ class Eletrodomesticos
         Console.WriteLine(Funçao);
     }
 }
-
 class Aluno
 {
 
-public string Nome;
-public string Idade;
-public string Nota;
+    public string Nome;
+    public string Idade;
+    public string Nota;
 
-public void Exibir()
+    public void Exibir()
+    {
+        Console.WriteLine(Nome);
+        Console.WriteLine(Idade);
+        Console.WriteLine(Nota);
+    }
+
+}
+public class ContaBancaria
 {
-    Console.WriteLine(Nome);
-    Console.WriteLine(Idade);
-    Console.WriteLine(Nota);
+
+private double Saldo;
+
+ void Depositar(double valor)
+{
+Saldo += valor;
+}
+
+void Sacar(double valor)
+{
+    Saldo -= valor;
+}
+
+public double ObterSaldo()
+{
+ return Saldo;   
 }
 
 }
